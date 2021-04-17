@@ -1,8 +1,10 @@
 package charactor;
+import java.io.Serializable;
 
-public class Hero {
+public class Hero implements Serializable{
+    private static final long serialVersionUID = 1L;
     public String name;
-    protected float hp;
+    public float hp;
 
     public void attackHero(Hero h) throws EnemyHeroIsDeadException{
         if(h.hp == 0){
